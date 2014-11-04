@@ -25,8 +25,13 @@ describe('Hyperlink', function () {
   it('should login the demo account using login form', function () {
     browser.get('https://hyperlinkapp.com/login/');
 
-    element(by.model('email')).sendKeys('demo@hyperlinkapp.com');
-    element(by.model('password')).sendKeys('ynsgJzCJW8re');
+    var ptor = protractor.getInstance();
+    browser.wait(function() {
+      return ptor.isElementPresent(by.css('[type="email"]'));
+    }, 8000);
+
+    element(by.css('[type="email"]')).sendKeys('demo@hyperlinkapp.com');
+    element(by.css('[type="password"]')).sendKeys('ynsgJzCJW8re');
 
     element(by.css('[type="submit"]')).click();
 
