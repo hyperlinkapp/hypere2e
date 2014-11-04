@@ -4,6 +4,13 @@ Hyperlink e2e tests based on Protractor.
 
 ## Usage
 
+To run locally
+
     $ npm install -g protractor
     $ webdriver-manager start
-    $ protractor
+    $ protractor conf/protractor.conf.js
+
+
+To run on SauceLab:
+    
+    $ protractor conf/protractor-sourcelab.conf.js

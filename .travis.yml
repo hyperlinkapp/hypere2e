@@ -1,28 +1,22 @@
 notifications:
   email:
-    - hi@chunlianglyu.com
-    - hpl1989@gmail.com
+  - hi@chunlianglyu.com
+  - hpl1989@gmail.com
 
 language: node_js
 node_js:
-  - "0.11"
+  - '0.10'
 
-cache:
-  directories:
-    - node_modules
+addons:
+  sauce_connect: true
 
 install:
   - npm install
-  - ./node_modules/protractor/bin/webdriver-manager update --standalone
 
-before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sleep 3
-  # Immune to logouts, but not VM deprovisions!
-  #- nohup bash -c "./node_modules/protractor/bin/webdriver-manager start 2>&1 &"
-  - ./node_modules/protractor/bin/webdriver-manager start &
-  - sleep 3
+script:
+  - "./node_modules/protractor/bin/protractor conf/protractor-saucelabs.conf.js"
 
-script: 
-  - ./node_modules/protractor/bin/protractor --capabilities.browserName firefox protractor.conf.js
+env:
+  global:
+    - secure: prvJj5KrWB4AuoT952L1lkfg/w+FJnAH+jH/+5BL24kvK86GjU+NAo2i6AnIIGtncdk0Ot8W5bIg4+7KNkJf5TPxlhOEHV2vDR8GIaE5dQVVA+pjAw3ANkxPC2keTjhSoA7PjIG1wBvrD2y4YxENZCVn0P5JBdgn0hbv0zEL9KI=
+    - secure: ZU5S+Q2wmFgsCh6GVfVsWYMBX1OLkare816syh4DUIfOmLRaU9Us6QbDTBIPKyy3F+vIPhIe8XSjGOISBUBjO/2RRVQT5+mGJrDk/DciZavLdFnN8AXKR0AvBdMLSDuCYdBeqzavn1dAqiePh/ueUTH5FdjbShpULZcW8kEqTRw=
