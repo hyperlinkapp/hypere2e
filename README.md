@@ -4,4 +4,4 @@ Hyperlink e2e tests based on Protractor.
 
     $ npm install -g protractor
     $ webdriver-manager start
-    $ protractor conf.js
+    $ protractor
