@@ -13,4 +13,4 @@ To run locally
 
 To run on SauceLab:
     
-    $ protractor conf/protractor-sourcelab.conf.js
+    $ SAUCE_USERNAME=<username> SAUCE_ACCESS_KEY=<access_key> protractor conf/protractor-sourcelab.conf.js
