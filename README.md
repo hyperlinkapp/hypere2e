@@ -14,3 +14,9 @@ To run locally
 To run on SauceLab:
     
     $ SAUCE_USERNAME=<username> SAUCE_ACCESS_KEY=<access_key> protractor conf/protractor-sourcelab.conf.js
+
+## Misc
+
+### SafariDriver is boken on Yosemite
+
+Install the SafariDriver extension manually from https://github.com/SeleniumHQ/selenium/tree/master/javascript/safari-driver/prebuilt

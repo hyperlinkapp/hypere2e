@@ -6,7 +6,7 @@ exports.config = {
     'browserName': 'chrome'
   },
 
-  specs: ['../specs/app.js'],
+  specs: ['../specs/**.js'],
 
   // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {

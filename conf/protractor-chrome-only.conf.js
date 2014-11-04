@@ -12,7 +12,7 @@ config.seleniumAddress = 'http://localhost:4444/wd/hub';
 config.chromeOnly = false;
 
 config.multiCapabilities = [
-  { 'browserName': 'safari' }
+  { 'browserName': 'chrome' }
 ];
 
 exports.config = config;
