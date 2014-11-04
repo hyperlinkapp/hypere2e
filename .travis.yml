@@ -20,7 +20,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   # Immune to logouts, but not VM deprovisions!
   #- nohup bash -c "./node_modules/protractor/bin/webdriver-manager start 2>&1 &"
-  - ./node_modules/protractor/bin/webdriver-manager start
+  - ./node_modules/protractor/bin/webdriver-manager start &
 
 script: 
-  - ./node_modules/protractor/bin/protractor protractor.conf.js
+  - ./node_modules/protractor/bin/protractor --browser PhantomJS protractor.conf.js
