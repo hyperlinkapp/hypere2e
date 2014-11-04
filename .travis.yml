@@ -23,4 +23,4 @@ before_script:
   - ./node_modules/protractor/bin/webdriver-manager start &
 
 script: 
-  - ./node_modules/protractor/bin/protractor --browser PhantomJS protractor.conf.js
+  - ./node_modules/protractor/bin/protractor --browser firefox protractor.conf.js
