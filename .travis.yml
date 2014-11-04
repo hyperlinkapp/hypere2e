@@ -21,6 +21,7 @@ before_script:
   # Immune to logouts, but not VM deprovisions!
   #- nohup bash -c "./node_modules/protractor/bin/webdriver-manager start 2>&1 &"
   - ./node_modules/protractor/bin/webdriver-manager start &
+  - sleep 3
 
 script: 
-  - ./node_modules/protractor/bin/protractor --browser firefox protractor.conf.js
+  - ./node_modules/protractor/bin/protractor --capabilities.browserName firefox protractor.conf.js
